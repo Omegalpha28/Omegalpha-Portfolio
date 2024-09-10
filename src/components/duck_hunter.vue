@@ -116,13 +116,12 @@ export default {
     color: inherit;
 }
 
-@media (max-width: 1088px) {
+@media screen and (max-width: 1088px) {
     .Title_Hunter .Hunter a {
-      font-size: 7rem;
+      font-size: 6rem;
     }
 
     .Duck {
-      background-size: cover;
       background-position-x: -75vh;
     }
 
@@ -132,7 +131,7 @@ export default {
   }
 
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .Title_Hunter .Hunter a {
       font-size: 5rem;
     }
@@ -147,9 +146,9 @@ export default {
     }
   }
 
-  @media (max-width: 540px) {
+  @media screen and (max-width: 540px) {
     .Title_Hunter .Hunter a {
-      font-size: 4rem;
+      font-size: 2rem;
     }
 
     .Duck {
@@ -162,7 +161,7 @@ export default {
     }
   }
 
-  @media (max-width: 480px) {
+  @media screen and (max-width: 480px) {
     .Title_Hunter .Hunter a {
       font-size: 3rem;
     }

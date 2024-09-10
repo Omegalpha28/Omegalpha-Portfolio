@@ -69,6 +69,9 @@ export default {
           text: "There are several mobs from the original game. During the tutorial, the player will receive instructions from a special panel."
         },
         {
+          text: "Everyone's after this friendly axolotl."
+        },
+        {
           text: "After the tutorial, the player can access the hub, which serves as their save point."
         },
         {
@@ -116,6 +119,7 @@ export default {
   background-image: var(--AK-background);
   background-repeat: no-repeat;
   font-family: 'Noto Sans', sans-serif;
+  background-size: cover;
 }
 
 .Title {
@@ -143,7 +147,7 @@ export default {
 
 @media (max-width: 1080px) {
     .Title .AK a {
-      font-size: 5rem;
+      font-size: 6rem;
     }
 
     .AKXolotl {
@@ -199,62 +203,59 @@ export default {
 
   }
   @media screen and (max-width: 600px) {
-    .Title .AK a {
-      font-size: 4rem;
-    }
-
-    .AKXolotl {
-      background-size: cover;
-      background-position-x: -55vh;
-    }
-
-    .Title {
-      margin-top: 5vh;
-      padding: 0.5vh;
-    }
-
-    .content img,
-    .content h1 {
-      width: 100%;
-      max-width: 100%;
-      padding-left: 0;
-      text-align: center;
-      padding: -2vh;
-    }
-
-    .content h1 {
-      font-size: 1.5rem;
-    }
-
+  .Title {
+    margin-top: 2vh;
+    padding: 0.5vh;
   }
 
-  @media screen and (max-width: 480px) {
-    .Title .AK a {
-      font-size: 3rem;
-    }
-
-    .AKXolotl {
-      background-size: cover;
-      background-position-x: -55vh;
-    }
-
-    .Title {
-      margin-top: 5vh;
-      padding: 0.5vh;
-    }
-
-    .content img,
-    .content h1 {
-      width: 100%;
-      max-width: 100%;
-      padding-left: 0;
-      text-align: center;
-      padding: -2vh;
-    }
-
-    .content h1 {
-      font-size: 1.5rem;
-    }
-
+  .content {
+    flex-direction: column;
+    justify-content: center;
   }
+
+  .Title .AK a {
+  font-size: 4rem;
+}
+
+  .content img,
+  .content h1 {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0;
+    text-align: center;
+    padding: 0;
+  }
+
+  .content h1 {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .Title {
+    margin-top: 2vh;
+    padding: 0.5vh;
+  }
+
+  .content {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+.Title .AK a {
+  font-size: 3rem;
+}
+  .content img,
+  .content h1 {
+    width: 100%;
+    max-width: 100%;
+    padding-left: 0;
+    text-align: center;
+    padding: 0;
+  }
+
+  .content h1 {
+    font-size: 1rem;
+  }
+}
 </style>

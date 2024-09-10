@@ -79,34 +79,72 @@ nav .changeTheme {
 
 .Présentation {
   display: flex;
-  background-size: 100%;
-  height: 100vh;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  background-image: var(--background_presentation);
+  background-size: 100%;
+  height: 110vh;
+  background: var(--background_presentation);
   background-repeat: no-repeat;
-}
-.Présentation header {
-  z-index: 2;
-  width: 100vh;
-  height: 100vh;
-  animation: floating 5s ease-in-out infinite alternate;
+  background-size: cover;
 }
 
-.Présentation header h1{
-  margin: 0;
-  text-transform: uppercase;
-  font-family: 'Vast Shadow', sans-serif;
-  font-size: 3vw;
+.Présentation header .box {
   background-color: var(--background_text);
-  padding: 10px;
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10%;
+  cursor: default;
+}
+
+.Présentation header .epitech {
+  width: 10rem;
+}
+.Présentation header .Title {
+  padding: 5%;
+  font-family: 'Honk';
+  width: 100%;
+  border-bottom: solid 1vh var(--button-color);
+  cursor: default;
+  font-size: 8vh;
+}
+
+.Présentation header .content {
+  display: flex;
+  align-items: center;
+}
+
+.Présentation header .me {
+  width: 25vh;
+  display: flex;
+  align-items: center;
+  height: auto;
+  border-radius: 50%;
+  padding: 2%;
+  animation: floating 2s infinite;
+}
+
+.Présentation header .me:hover {
+  animation: floating 0.5s infinite;
+  cursor: pointer;
+}
+
+.Présentation header .presentation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1%;
+}
+
+.Présentation header .name, .Présentation header .skills {
+  background-color: transparent;
+  margin: 2vh;
+  font-family: 'Vast Shadow';
+  text-align: left;
+  width: 100%;
+  height: 100%;
+  padding: 5vh;
+  box-sizing: border-box;
 }
 
 @keyframes dvdlogo {
@@ -354,6 +392,18 @@ nav .changeTheme {
   .Présentation {
     background-size: cover;
     background-position-x: -15vh;
+  }
+  .Présentation header .Title {
+    font-size: 7vh;
+  }
+  .Présentation header .name, .Présentation header .skills {
+    margin: 1vh;
+    font-family: 'Vast Shadow';
+    text-align: left;
+    width: 70%;
+    height: 80%;
+    padding: 1vh;
+    box-sizing: border-box;
   }
 }
 

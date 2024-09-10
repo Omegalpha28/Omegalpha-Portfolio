@@ -14,18 +14,20 @@
       </div>
     </nav>
     <section class="Présentation" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="1000">
-      <header>
-        <transition ref="fade">
-          <h1 v-if="showFirst">Welcome Here!</h1>
-        </transition>
-        <transition ref="fade2">
-          <h1 v-if="showSecond">My name is Ossan MSOILI.</h1>
-        </transition>
-        <transition ref="fade2">
-          <h1 v-if="showThird">It's my Portfolio!</h1>
-        </transition>
-      </header>
-    </section>
+  <header>
+    <div class="box" data-aos="zoom-in" data-aos-delay="70" data-aos-duration="1000">
+      <h1 class="Title"> My Portfolio</h1>
+      <div class="content">
+        <img :src="face" class="me">
+        <div class="presentation">
+          <h1 class="name"> Name: Ossan Msoili</h1>
+          <h1 class="skills"> Student at Epitech Lyon  <img :src="epitech" alt="epitech" class="epitech"> </h1>
+        </div>
+      </div>
+    </div>
+  </header>
+</section>
+
     <about_me title="=About Me" data-aos-delay="50" data-aos-duration="1000"/>
     <duck_hunter title="Duck_hunter" data-aos-delay="50" data-aos-duration="1000"/>
     <akxolotl title="AKXolotl" data-aos-delay="50" data-aos-duration="1000"/>
@@ -41,9 +43,11 @@ import about_me from './about_me.vue';
 import duck_hunter from './duck_hunter.vue';
 import minishell from './minishell.vue';
 import darkModeImage from '@/assets/darkmode.png';
+import face from '@/assets/Ossan.jpg';
 import lightModeImage from '@/assets/lightmode.png';
 import githubLightModeImage from '@/assets/github_lightMode.png';
 import githubDarkModeImage from '@/assets/github_darkMode.png';
+import epitech from '@/assets/epitech.png';
 import akIntroImage from '@/assets/AKXolotl/Intro.png';
 import akIntroDarkImage from '@/assets/AKXolotl/Intro2.png';
 import duckHunterImage from '@/assets/Duck_Hunter/Duck_hunt.jpg';
@@ -63,44 +67,9 @@ const services = ref([
 
 const exp = ref([
   {title: 'My Duck Hunter', link: '#duck_hunter'},
-  {title: 'My Radar', link: '#'},
   {title: 'My RPG/AK-Xolotl', link: '#akxolotl'},
   {title: 'My Shell', link: '#minishell'},
 ]);
-
-const showFirst = ref(true);
-const showSecond = ref(false);
-const showThird = ref(false);
-
-let timeout1, timeout2, resetTimeout;
-
-const startTimeouts = () => {
-  clearTimeout(timeout1);
-  clearTimeout(timeout2);
-  clearTimeout(resetTimeout);
-  timeout1 = setTimeout(() => {
-    showFirst.value = false;
-    showSecond.value = true;
-  }, 5000);
-  timeout2 = setTimeout(() => {
-    showSecond.value = false;
-    showThird.value = true;
-  }, 10000);
-  resetTimeout = setTimeout(() => {
-    resetStates();
-    startTimeouts();
-  }, 15000);
-};
-
-const resetStates = () => {
-  showFirst.value = true;
-  showSecond.value = false;
-  showThird.value = false;
-};
-
-onMounted(() => {
-  startTimeouts();
-});
 
 const userPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 const toggleBtn = ref(userPrefersDark ? 1 : 0);

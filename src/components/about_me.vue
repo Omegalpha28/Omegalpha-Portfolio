@@ -1,7 +1,7 @@
 <template>
   <section id="AboutMe" class="Experiences" data-aos="fade-up">
     <header class="about_title">
-      <a href="../src/assets/CV_MSOILI_Ossan.pdf" target="_blank" rel="noopener noreferrer">About Me</a>
+      <a href="/src/assets/CV_MSOILI_Ossan.pdf" target="_blank" rel="noopener noreferrer">About Me</a>
     </header>
     <div class="lang_buttons">
       <button class="my-button" :class="{ active: isListVisible }" @click="toggleListVisibility">
@@ -20,33 +20,33 @@
         <ul class="list_lang">
           <h1>Programming Language</h1>
           <li class="only_language">
-            <a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blanck"><img src="../assets/About_Me/c.png" alt="C"></a>
-            <a href="https://www.python.org/" target="_blanck"><img src="../assets/About_Me/python.png" alt="Python"></a>
-            <a href="https://www.gnu.org/software/bash/manual/bash.html" target="_blanck"><img src="../assets/About_Me/bash(2).png" alt="bash"></a>
-            <a href="https://fr.wikipedia.org/wiki/Hypertext_Markup_Language" target="_blanck"><img src="../assets/About_Me/html.png" alt="HTML"></a>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blanck"><img src="../assets/About_Me/css.png" alt="CSS"></a>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blanck"><img src="../assets/About_Me/js.png" alt="JS"></a>
+            <a href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blanck"><img src="@/assets/About_Me/c.png" alt="C"></a>
+            <a href="https://www.python.org/" target="_blanck"><img src="@/assets/About_Me/python.png" alt="Python"></a>
+            <a href="https://www.gnu.org/software/bash/manual/bash.html" target="_blanck"><img src="@/assets/About_Me/bash(2).png" alt="bash"></a>
+            <a href="https://fr.wikipedia.org/wiki/Hypertext_Markup_Language" target="_blanck"><img src="@/assets/About_Me/html.png" alt="HTML"></a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blanck"><img src="@/assets/About_Me/css.png" alt="CSS"></a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blanck"><img src="@/assets/About_Me/js.png" alt="JS"></a>
           </li>
           <h1>Frameworks</h1>
           <li class="frameworks">
-            <a href="https://vuejs.org/" target="_blanck"><img src="../assets/About_Me/vue.png" alt="vue"></a>
-            <a href="https://react.dev/" target="_blanck"><img src="../assets/About_Me/react.png" alt="React"></a>
-            <a href="https://www.renpy.org/" target="_blanck"><img src="../assets/About_Me/renpy.png" alt="RenPy"></a>
+            <a href="https://vuejs.org/" target="_blanck"><img src="@/assets/About_Me/vue.png" alt="vue"></a>
+            <a href="https://react.dev/" target="_blanck"><img src="@/assets/About_Me/react.png" alt="React"></a>
+            <a href="https://www.renpy.org/" target="_blanck"><img src="@/assets/About_Me/renpy.png" alt="RenPy"></a>
           </li>
           <h1>Library or others tools</h1>
           <li class="tools_library">
-            <a href="https://nodejs.org" target="_blanck"><img src="../assets/About_Me/nodes_js.png" alt="Nodes-JS"></a>
-            <a href="https://www.blackmagicdesign.com/products/davinciresolve" target="_blanck"><img src="../assets/About_Me/DaVinci_Resolve_Studio.png" alt="DaVinci"></a>
-            <a href="https://docs.docker.com/" target="_blanck"><img src="../assets/About_Me/docker.png" alt="docker"></a>
-            <a href="https://www.sfml-dev.org/" target="_blanck"><img src="../assets/About_Me/CSFML.png" alt="CSFML"></a>
-            <a href="https://git-scm.com/" target="_blanck"><img src="../assets/About_Me/git.png" alt="git"></a>
-            <a href="https://www.mysql.com/" target="_blanck"><img src="../assets/About_Me/mySQL.png" alt="SQL"></a>
+            <a href="https://nodejs.org" target="_blanck"><img src="@/assets/About_Me/nodes_js.png" alt="Nodes-JS"></a>
+            <a href="https://www.blackmagicdesign.com/products/davinciresolve" target="_blanck"><img src="@/assets/About_Me/DaVinci_Resolve_Studio.png" alt="DaVinci"></a>
+            <a href="https://docs.docker.com/" target="_blanck"><img src="@/assets/About_Me/docker.png" alt="docker"></a>
+            <a href="https://www.sfml-dev.org/" target="_blanck"><img src="@/assets/About_Me/CSFML.png" alt="CSFML"></a>
+            <a href="https://git-scm.com/" target="_blanck"><img src="@/assets/About_Me/git.png" alt="git"></a>
+            <a href="https://www.mysql.com/" target="_blanck"><img src="@/assets/About_Me/mySQL.png" alt="SQL"></a>
           </li>
           <li class="tools_library_2">
-            <a href="https://unity.com" target="_blanck"><img src="../assets/About_Me/unity.png" alt="Unity"></a>
+            <a href="https://unity.com" target="_blanck"><img src="@/assets/About_Me/unity.png" alt="Unity"></a>
             <div class="logo_width">
-              <a href="https://fr.wikipedia.org/wiki/Structured_Query_Language" target="_blanck"><img src="../assets/About_Me/sql.png" alt="SQL"></a>
-              <a href="https://www.pygame.org/news" target="_blanck"><img src="../assets/About_Me/pygame logo très moche.png" alt="pygame"></a>
+              <a href="https://fr.wikipedia.org/wiki/Structured_Query_Language" target="_blanck"><img src="@/assets/About_Me/sql.png" alt="SQL"></a>
+              <a href="https://www.pygame.org/news" target="_blanck"><img src="@/assets/About_Me/pygame logo très moche.png" alt="pygame"></a>
             </div>
           </li>
         </ul>
@@ -125,6 +125,7 @@ let initialRatio = window.devicePixelRatio;
   background-image: var(--about-background);
   background-repeat: no-repeat;
   font-family: 'Noto Sans', sans-serif;
+  cursor: default;
 }
 
 .about_title a {
@@ -192,7 +193,7 @@ let initialRatio = window.devicePixelRatio;
   padding-top: 2rem;
   padding-bottom: 1rem;
   position: absolute;
-  top: 25rem;
+  top: 26rem;
   left: 26rem;
   background-color: var(--color-background-mute);
   border-radius: 20px;
@@ -208,7 +209,7 @@ let initialRatio = window.devicePixelRatio;
   padding-top: 2rem;
   padding-bottom: 1rem;
   position: absolute;
-  top: 24rem;
+  top: 25rem;
   left: 25rem;
   background-color: var(--background_text);
   border-radius: 20px;
@@ -293,7 +294,7 @@ let initialRatio = window.devicePixelRatio;
   padding-top: 2rem;
   padding-bottom: 1rem;
   position: absolute;
-  top: 25rem;
+  top: 27rem;
   left: 84rem;
   background-color: var(--color-background-mute);
   border-radius: 20px;
@@ -310,7 +311,7 @@ let initialRatio = window.devicePixelRatio;
   padding-top: 2rem;
   padding-bottom: 1rem;
   position: absolute;
-  top: 24rem;
+  top: 26rem;
   left: 85rem;
   background-color: var(--background_text);
   border-radius: 20px;
@@ -395,7 +396,7 @@ let initialRatio = window.devicePixelRatio;
   .Experiences {
     padding: 0rem;
     background-size: cover;
-    background-position-x: -20vh;
+    background-position-x: -10vh;
   }
 
   .about_title h2 {
@@ -416,7 +417,7 @@ let initialRatio = window.devicePixelRatio;
     background-color: transparent;
   }
   .about_title a {
-    font-size: 21vw;
+    font-size: 10vh;
     margin: 0 0;
   }
 
@@ -467,7 +468,7 @@ let initialRatio = window.devicePixelRatio;
     background-color: transparent;
   }
   .about_title a {
-    font-size: 20vw;
+    font-size: 10vh;
     margin: 0 0;
   }
 

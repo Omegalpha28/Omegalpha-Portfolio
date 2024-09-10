@@ -88,7 +88,6 @@ export default {
 
 
 <style>
-
 .Minishell {
     display: flex;
     flex-direction: column;
@@ -107,7 +106,6 @@ export default {
     cursor: pointer;
     text-decoration: none;
     color: inherit;
-    flex-direction: column;
 }
 
 .Minishell header .Ms:hover {
@@ -120,6 +118,66 @@ export default {
     cursor: pointer;
     text-decoration: none;
     color: inherit;
+}
+
+/* Media Queries */
+@media (max-width: 1088px) {
+    .Title_Minishell .Ms a {
+      font-size: 6rem;
+    }
+
+    .Minishell {
+      background-position-x: -75vh;
+    }
+
+    .Title_Minishell {
+      margin-top: 2vh;
+    }
+}
+
+@media screen and max-width: 768px) {
+    .Title_Minishell .Ms a {
+      font-size: 5rem;
+    }
+
+    .Minishell {
+      background-size: cover;
+      background-position-x: -78vh;
+    }
+
+    .Title_Minishell {
+      margin-top: 10vh;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .Title_Minishell .Ms a {
+      font-size: 2rem;
+    }
+
+    .Minishell {
+      background-size: cover;
+      background-position-x: -80vh;
+    }
+
+    .Title_Minishell {
+      margin-top: 2vh;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .Title_Minishell .Ms a {
+      font-size: 3rem;
+    }
+
+    .Minishell {
+      background-size: cover;
+      background-position-x: -80vh;
+    }
+
+    .Title_Minishell {
+      margin-top: 2vh;
+    }
 }
 
 </style>

@@ -49,15 +49,52 @@ export default {
         this.intervalId = null;
       }
     },
+    // Charger dynamiquement les images depuis un dossier spécifique
     fetchImages() {
-      fetch('../src/tab_json/images_ak.json')
-        .then(response => response.json())
-        .then(data => {
-          this.images = data;
+      const imageFiles = import.meta.glob('@/assets/AKXolotl/diapo/*.png'); // Chargement des images
+      const imagesInfo = [
+        {
+          text: "We were a group of 4 for this project where we needed to create our own RPG, and we were selected to develop it based on the game AK Xolotl."
+        },
+        {
+          text: "Our game includes a Level Editor where we can create new biomes and environments."
+        },
+        {
+          text: "Settings are available for most elements, while others are still in development."
+        },
+        {
+          text: "The goal is to move through levels, defeating enemies and collecting weapons before facing a boss to win."
+        },
+        {
+          text: "There are several mobs from the original game. During the tutorial, the player will receive instructions from a special panel."
+        },
+        {
+          text: "After the tutorial, the player can access the hub, which serves as their save point."
+        },
+        {
+          text: "There are merchants at this location where the player can trade equipment and view the babies they have collected during the run (in progress)."
+        },
+        {
+          text: "You can change skins once you have collected the babies and raised them."
+        },
+        {
+          text: "Good luck and may the odds be ever in your favor!"
+        }
+      ];
+
+      Promise.all(
+        Object.keys(imageFiles).map(async (path, index) => {
+          const src = await imageFiles[path]();
+          return {
+            src: src.default,
+            text: imagesInfo[index]?.text || 'No description'
+          };
         })
-        .catch(error => {
-          console.error('Error loading images:', error);
-        });
+      ).then(loadedImages => {
+        this.images = loadedImages;
+      }).catch(error => {
+        console.error('Error loading images:', error);
+      });
     }
   },
   mounted() {
@@ -68,7 +105,6 @@ export default {
   }
 };
 </script>
-
 
 <style>
 

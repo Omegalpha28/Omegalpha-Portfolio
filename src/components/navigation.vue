@@ -40,8 +40,6 @@ import akxolotl from './akxolotl.vue';
 import about_me from './about_me.vue';
 import duck_hunter from './duck_hunter.vue';
 import minishell from './minishell.vue';
-
-// Importer les images
 import darkModeImage from '@/assets/darkmode.png';
 import lightModeImage from '@/assets/lightmode.png';
 import githubLightModeImage from '@/assets/github_lightMode.png';

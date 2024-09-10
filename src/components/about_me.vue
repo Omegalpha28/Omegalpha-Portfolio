@@ -127,18 +127,8 @@ let initialRatio = window.devicePixelRatio;
   font-family: 'Noto Sans', sans-serif;
 }
 
-.about_title h2 {
-  display: flex;
-  justify-content: left;
-  margin: 2vh;
-  font-size: 3vh;
-  cursor: pointer;
-  text-decoration: none;
-  color: inherit;
-  flex-direction: column;
-}
-
 .about_title a {
+  cursor: pointer;
   height: 10vh;
   font-size: 10rem;
   display: flex;
@@ -148,6 +138,8 @@ let initialRatio = window.devicePixelRatio;
   margin-top: 5vh;
   margin-left: 50vh;
   margin-right: 50vh;
+  text-decoration: none;
+  color: inherit;
   cursor: pointer;
   font-family: 'Honk', sans-serif;
 }

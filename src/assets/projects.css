@@ -40,12 +40,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 99%;
-    height: 99%;
+    width: 98%;
+    height: 98%;
 }
 
 .content img {
-    width: 50%;
+    width: 45%;
     height: auto;
     max-width: 50%;
     border-radius: 8%;
@@ -57,9 +57,11 @@
     font-size: 2rem;
     margin: 0;
     padding-left: 10vh;
-    border-radius: 50%;
+    padding-right: 10vh;
+    border-radius: 2%;
     margin-left: 1%;
     font-family: 'Vast Shadow', sans-serif;
+    background-color: var(--background_text);
 }
 
 @media (max-width: 768px) {

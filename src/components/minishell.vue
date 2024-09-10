@@ -1,32 +1,32 @@
 <template>
-    <section id="minishell" class="Minishell" data-aos="fade-up">
-      <header class="Title_Minishell">
-        <div class="Ms"><a href="git@github.com:Omegalpha28/Minishell.git">My Shell</a></div>
-        <div @click="toggleVisibility" class="discover-button">Discover this Project</div>
-      </header>
-      <div class="image-container" v-if="isVisible">
-        <div :class="['diapo', { 'show': currentIndex === 0 }]">
-          <div class="content">
-            <h1>{{ images[0].text }}</h1>
-            <img :src="images[0].src" alt="Begin">
-          </div>
+  <section id="minishell" class="Minishell" data-aos="fade-up">
+    <header class="Title_Minishell">
+      <div class="Ms"><a href="https://github.com/Omegalpha28/Minishell">My Shell</a></div>
+      <div @click="toggleVisibility" class="discover-button">Discover this Project</div>
+    </header>
+    <div class="image-container" v-if="isVisible">
+      <div v-for="(image, index) in images" :key="index" :class="['diapo', { 'show': currentIndex === index }]">
+        <div class="content">
+          <h1>{{ image.text }}</h1>
+          <img :src="image.src" :alt="image.text">
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 </template>
 
 <script>
-  export default {
-    name: 'minishell',
-    data() {
-      return {
-        isVisible: false,
-        currentIndex: 0,
-        intervalId: null,
-        images_ms: []
-      };
-    },
-    methods: {
+export default {
+  name: 'minishell',
+  data() {
+    return {
+      isVisible: false,
+      currentIndex: 0,
+      intervalId: null,
+      images: []
+    };
+  },
+  methods: {
     toggleVisibility() {
       this.isVisible = !this.isVisible;
       if (this.isVisible) {
@@ -49,15 +49,31 @@
         this.intervalId = null;
       }
     },
-    fetchImages() {
-      fetch('../src/tab_json/images_ms.json')
-        .then(response => response.json())
-        .then(data => {
-          this.images = data;
-        })
-        .catch(error => {
-          console.error('Error loading images:', error);
-        });
+    async fetchImages() {
+      const imageFiles = import.meta.glob('@/assets/minishell/diapo/*.png');
+      const imagesInfo = [
+        {
+          src: '1.png',
+          text: "Run standard commands and binaries, use cd for directory changes, setenv and unsetenv for environment variables, env for displaying or modifying them, and exit to close the shell. Supports redirections like ';' for executing multiple commands sequentially."
+        }
+      ];
+
+      try {
+        const imageEntries = await Promise.all(
+          Object.keys(imageFiles).map(async (path) => {
+            const module = await imageFiles[path]();
+            const imageName = path.split('/').pop();
+            return {
+              src: module.default,
+              text: imagesInfo.find(info => info.src === imageName)?.text || 'No description'
+            };
+          })
+        );
+
+        this.images = imageEntries;
+      } catch (error) {
+        console.error('Error loading images:', error);
+      }
     }
   },
   mounted() {
@@ -68,6 +84,8 @@
   }
 };
 </script>
+
+
 
 <style>
 

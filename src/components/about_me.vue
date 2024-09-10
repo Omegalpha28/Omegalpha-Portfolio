@@ -31,7 +31,7 @@
           <li class="frameworks">
             <a href="https://vuejs.org/" target="_blanck"><img src="../assets/About_Me/vue.png" alt="vue"></a>
             <a href="https://react.dev/" target="_blanck"><img src="../assets/About_Me/react.png" alt="React"></a>
-            <a href="https://www.renpy.org/" target="_blanck"><img src="../assets/About_Me/ren'py.png" alt="RenPy"></a>
+            <a href="https://www.renpy.org/" target="_blanck"><img src="../assets/About_Me/renpy.png" alt="RenPy"></a>
           </li>
           <h1>Library or others tools</h1>
           <li class="tools_library">

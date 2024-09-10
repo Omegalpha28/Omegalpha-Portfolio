@@ -41,7 +41,7 @@
   --AK-background: url("./AKXolotl/Intro.png");
   --AK-Duck-Hunter: url("./Duck_Hunter/Duck_hunt.jpg");
   --background_presentation: url("./backgroundL.gif");
-  --theme_mode: url("./light_mode.png");
+  --theme_mode: url("./lightmode.png");
 }
 
 :root {
@@ -80,7 +80,7 @@
     --about-background: url("./seaD.gif");
     --AK-Duck-Hunter: url("./Duck_Hunter/Duck_huntD.jpg");
     --AK-background: url("./AKXolotl/Intro2.png");
-    --theme_mode: url("./dark_mode.png");
+    --theme_mode: url("./darkmode.png");
     --background_presentation: url("./background.gif");
     --ms-background: url("./minishell/background.png");
     --themeMode: var(--theme_mode);

@@ -107,7 +107,7 @@ if (toggleBtn.value === 1 && start === 0) {
 
 themeBtn.addEventListener('click', () => {
   if (toggleBtn.value === 1) {
-    themeBtnMode.src = "../src/assets/light_mode.png";
+    themeBtnMode.src = "../src/assets/lightmode.png";
     themeGithubMode.src = "../src/assets/github_lightMode.png";
     document.documentElement.style.setProperty('--background-button-color', 'var(--vt-c-back-red)');
     document.documentElement.style.setProperty('--background_text', 'var(--vt-c-back-light');
@@ -128,7 +128,7 @@ themeBtn.addEventListener('click', () => {
     document.documentElement.style.setProperty('--color-text', '#2c3e50');
     toggleBtn.value--;
   } else {
-    themeBtnMode.src = "../src/assets/dark_mode.png";
+    themeBtnMode.src = "../src/assets/darkmode.png";
     themeGithubMode.src = "../src/assets/github_darkMode.png";
     document.documentElement.style.setProperty('--background-button-color', 'var(--vt-c-back-red-dark)');
     document.documentElement.style.setProperty('--background_text', 'var(--vt-c-back-dark)');

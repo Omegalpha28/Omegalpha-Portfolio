@@ -1,0 +1,131 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --vt-c-white: #ffffff;
+  --vt-c-white-soft: #f8f8f8;
+  --vt-c-white-mute: #f2f2f2;
+
+  --vt-c-blue: #0011ff;
+  --vt-c-blue-soft: #3d4aff;
+  --vt-c-blue-mute: #4f5aff;
+
+  --vt-c-black: #181818;
+  --vt-c-black-soft: #222222;
+  --vt-c-black-mute: #282828;
+
+  --vt-c-indigo: #2c3e50;
+
+  --vt-c-back-light: rgba(233, 224, 224, 0.8);
+  --vt-c-back-dark: rgba(56, 53, 53, 0.8);
+  --vt-c-back-red-dark: rgba(143, 23, 23, 0.8);
+  --vt-c-back-red: rgba(247, 35, 35, 0.8);
+
+  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
+  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
+  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
+  --vt-c-divider-dark-2: rgba(84, 84, 84, 0.48);
+  --vt-c-divider-blue-1: var(--vt-c-blue);
+  --vt-c-divider-blue-2: rgb(18, 175, 236);
+
+  --vt-c-text-light-1: var(--vt-c-indigo);
+  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
+  --vt-c-text-dark-1: var(--vt-c-white);
+  --vt-c-text-dark-2: rgba(235, 235, 235, 0.64);
+  --vt-c-text-blue-1: var(--vt-c-blue);
+  --vt-c-text-blue-2: rgb(18, 175, 236);
+
+  --color-button : red;
+  --background-button-color: var(--vt-c-back-red);
+  --color-button-mute: var(--background-button-color);
+  --ms-background: url("./minishell/background.png");
+  --about-background: url("./seaL.gif");
+  --AK-background: url("./AKXolotl/Intro.png");
+  --AK-Duck-Hunter: url("./Duck_Hunter/Duck_hunt.jpg");
+  --background_presentation: url("./backgroundL.gif");
+  --theme_mode: url("./light_mode.png");
+}
+
+:root {
+  --color-background: var(--vt-c-white);
+  --color-background-soft: var(--vt-c-white-soft);
+  --color-background-mute: var(--vt-c-white-mute);
+
+  --color-border: var(--vt-c-divider-light-2);
+  --color-border-hover: var(--vt-c-divider-light-1);
+
+  --color-heading: var(--vt-c-text-light-1);
+  --color-text: var(--vt-c-text-light-1);
+  --color-uni: var(--vt-c-back-red);
+  --button-color: var(--color-button);
+  --background_text: var(--vt-c-back-light);
+  --background_pre: var(--background_presentation);
+  --section-gap: 160px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: var(--vt-c-black);
+    --color-background-soft: var(--vt-c-black-soft);
+    --color-background-mute: var(--vt-c-black-mute);
+
+    --color-border: var(--vt-c-divider-dark-2);
+    --color-border-hover: var(--vt-c-divider-dark-1);
+
+    --color-heading: var(--vt-c-text-dark-1);
+    --color-text: var(--vt-c-text-dark-2);
+
+    --color-button : #9d24a8;
+    --color-button-mute : #9d24a881;
+    --background-button-color: var(--color-button-mute);
+    --background_text: var(--vt-c-back-dark);
+    --about-background: url("./seaD.gif");
+    --AK-Duck-Hunter: url("./Duck_Hunter/Duck_huntD.jpg");
+    --AK-background: url("./AKXolotl/Intro2.png");
+    --theme_mode: url("./dark_mode.png");
+    --background_presentation: url("./background.gif");
+    --ms-background: url("./minishell/background.png");
+    --themeMode: var(--theme_mode);
+    --background_pre: var(--background_presentation);
+    --button-color: var(--color-button);
+    --button-mute: var(--color-button-mute);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--color-background);
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  line-height: 1.6;
+  margin: 0;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    'noto sans',
+    Arch,
+    'noto sans',
+    sans-serif;
+  font-size: 20px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

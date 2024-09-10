@@ -1,0 +1,6 @@
+[
+    {
+        "src": "../src/assets/minishell/mysh_term.png",
+        "text": "We can run standard commands and binaries, as well as use cd(Changes the current directory), setenv(Sets environment variables), unsetenv(Removes environment variables), env(Displays or modifies environment variables), and exit(Exits the shell), along with redirections like ';'(Allows multiple commands to run in sequence. These commands help with navigation, managing variables, and executing multiple instructions.)"
+    }
+]

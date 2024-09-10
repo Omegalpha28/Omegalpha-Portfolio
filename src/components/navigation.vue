@@ -9,7 +9,7 @@
                 </a>
               </div>
               <div class="changeTheme">
-                  <img src="../assets/light_mode.png" alt="new_theme">
+                  <img src="../assets/lightmode.png" alt="new_theme">
               </div>
           </div>
       </nav>
@@ -100,7 +100,7 @@ const themeGithubMode = themeGithub.querySelector('img');
 let start = 0;
 
 if (toggleBtn.value === 1 && start === 0) {
-  themeBtnMode.src = "../src/assets/dark_mode.png";
+  themeBtnMode.src = "../src/assets/darkmode.png";
   themeGithubMode.src = "../src/assets/github_darkMode.png";
   start++;
 }

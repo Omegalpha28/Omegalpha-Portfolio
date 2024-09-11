@@ -334,6 +334,10 @@ let initialRatio = window.devicePixelRatio;
   animation: my_rotationY_scale 1.5s infinite ease-in-out;
 }
 
+.section_language h1 {
+
+  font-family: 'Vast Shadow', sans-serif;
+}
 .section_language {
   display: flex;
   align-items: center;

@@ -1,7 +1,7 @@
 <template>
   <section id="duck_hunter" class="Duck" data-aos="fade-up">
     <header class="Title_Hunter">
-      <div class="Hunter"><a href="https://github.com/Omegalpha28/Duck_Hunter">MY Duck Hunter</a></div>
+      <div class="Hunter"><a href="https://github.com/Omegalpha28/Duck_Hunter">Duck Hunter</a></div>
       <div @click="toggleVisibility" class="discover-button">Discover this Project</div>
     </header>
     <div class="image-container" v-if="isVisible">
@@ -95,6 +95,7 @@ export default {
     background-image: var(--AK-Duck-Hunter);
     background-repeat: no-repeat;
     font-family: 'Noto Sans', sans-serif;
+    padding: 1%;
 }
 
 .Title_Hunter {
@@ -127,6 +128,10 @@ export default {
 
     .Title_Hunter {
       margin-top: 2vh;
+    }
+
+    .Duck header {
+      padding: 10%;
     }
   }
 

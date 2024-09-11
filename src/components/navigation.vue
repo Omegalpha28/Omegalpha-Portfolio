@@ -21,7 +21,8 @@
         <img :src="face" class="me">
         <div class="presentation">
           <h1 class="name"> Name: Ossan Msoili</h1>
-          <h1 class="skills"> Student at Epitech Lyon  <img :src="epitech" alt="epitech" class="epitech"> </h1>
+          <h1 class="skills"> Student at Epitech Lyon   </h1>
+          <img :src="epitech" alt="epitech" class="epitech">
         </div>
       </div>
     </div>

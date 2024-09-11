@@ -1,7 +1,7 @@
 <template>
   <section id="akxolotl" class="AKXolotl" data-aos="fade-up">
     <header class="Title">
-      <div class="AK"><a href="https://github.com/Omegalpha28/my_rpg">MY RPG/AK Xolotl</a></div>
+      <div class="AK"><a href="https://github.com/Omegalpha28/my_rpg">MY AK Xolotl</a></div>
       <div @click="toggleVisibility" class="discover-button">Discover this Project</div>
     </header>
     <div class="image-container" v-if="isVisible">
@@ -154,7 +154,9 @@ export default {
       background-size: cover;
       background-position-x: -55vh;
     }
-
+    .AKXolotl header {
+      padding: 10%;
+    }
     .Title {
       margin-top: 5vh;
     }

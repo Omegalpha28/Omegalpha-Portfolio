@@ -7,8 +7,8 @@
     <div class="image-container" v-if="isVisible">
       <div v-for="(image, index) in images" :key="index" :class="['diapo', { 'show': currentIndex === index }]">
         <div class="content">
-          <h1>{{ image.text }}</h1>
           <img :src="image.src" :alt="image.text">
+          <h1>{{ image.text }}</h1>
         </div>
       </div>
     </div>
@@ -54,7 +54,7 @@ export default {
       const imagesInfo = [
         {
           src: '1.png',
-          text: "Run standard commands and binaries, use cd for directory changes, setenv and unsetenv for environment variables, env for displaying or modifying them, and exit to close the shell. Supports redirections like ';' for executing multiple commands sequentially."
+          text: "Run commands, use cd for directory changes, setenv/unsetenv for environment variables, env for display/edit, and exit to close the shell. Supports ';' for sequential command execution."
         }
       ];
 
@@ -96,6 +96,7 @@ export default {
     background-image: var(--ms-background);
     background-repeat: no-repeat;
     font-family: 'Noto Sans', sans-serif;
+    padding: 1%;
 }
 
 .Title_Minishell {
@@ -120,22 +121,22 @@ export default {
     color: inherit;
 }
 
-/* Media Queries */
-@media (max-width: 1088px) {
+@media (max-width: 1080px) {
     .Title_Minishell .Ms a {
-      font-size: 6rem;
+      font-size: 5rem;
     }
 
     .Minishell {
       background-position-x: -75vh;
     }
-
+    .Minishell header {
+      padding: 10%
+    };
     .Title_Minishell {
       margin-top: 2vh;
     }
 }
-
-@media screen and max-width: 768px) {
+@media screen and (max-width: 768px) {
     .Title_Minishell .Ms a {
       font-size: 5rem;
     }
@@ -179,5 +180,4 @@ export default {
       margin-top: 2vh;
     }
 }
-
 </style>

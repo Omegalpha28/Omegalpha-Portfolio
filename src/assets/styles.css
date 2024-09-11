@@ -98,7 +98,10 @@ nav .changeTheme {
 }
 
 .Présentation header .epitech {
-  width: 10rem;
+  width: 20vh;
+  height: auto;
+  align-self: flex-start;
+  padding: 5%;
 }
 .Présentation header .Title {
   padding: 5%;
@@ -106,12 +109,12 @@ nav .changeTheme {
   width: 100%;
   border-bottom: solid 1vh var(--button-color);
   cursor: default;
-  font-size: 8vh;
+  font-size: 9vh;
 }
 
 .Présentation header .content {
   display: flex;
-  align-items: center;
+  align-self: flex-start;
 }
 
 .Présentation header .me {
@@ -133,7 +136,6 @@ nav .changeTheme {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1%;
 }
 
 .Présentation header .name, .Présentation header .skills {
@@ -143,7 +145,7 @@ nav .changeTheme {
   text-align: left;
   width: 100%;
   height: 100%;
-  padding: 5vh;
+  padding: 5%;
   box-sizing: border-box;
 }
 
@@ -387,21 +389,29 @@ nav .changeTheme {
   from {width: 0}
 }
 
-@media screen and (max-width: 1900px) {
+@media screen and (max-width: 1000px) {
 
   .Présentation {
     background-size: cover;
     background-position-x: -15vh;
+    padding: 1%;
   }
   .Présentation header .Title {
     font-size: 7vh;
   }
+
+  .Présentation header .epitech {
+    width: 30%;
+    height: auto;
+    padding: 1vh;
+    align-self: center;
+  }
+
   .Présentation header .name, .Présentation header .skills {
-    margin: 1vh;
+
     font-family: 'Vast Shadow';
     text-align: left;
-    width: 70%;
-    height: 80%;
+    text-align: center;
     padding: 1vh;
     box-sizing: border-box;
   }

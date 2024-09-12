@@ -1,5 +1,5 @@
 <template>
-  <section id="AboutMe" class="Experiences" data-aos="fade-up">
+  <section id="AboutMe" class="Experiences">
     <header class="about_title">
       <a href="/src/assets/CV_MSOILI_Ossan.pdf" target="_blank" rel="noopener noreferrer">About Me</a>
     </header>
@@ -107,8 +107,6 @@ let initialRatio = window.devicePixelRatio;
       document.getElementById("elementToHide").style.display = "block";
     }
   }
-
-  // Vérifier le zoom lors du redimensionnement et du scroll
   window.addEventListener("resize", checkZoom);
   window.addEventListener("scroll", checkZoom);
 </script>
@@ -122,6 +120,7 @@ let initialRatio = window.devicePixelRatio;
   height: 110vh;
   align-items: center;
   flex-direction: column;
+  background-size: cover;
   background-image: var(--about-background);
   background-repeat: no-repeat;
   font-family: 'Noto Sans', sans-serif;
@@ -541,11 +540,10 @@ let initialRatio = window.devicePixelRatio;
   margin: 1vh;
 }
 
-  .my-button {
+.my-button {
     padding: 1vh 1vh;
     font-size: 5vw;
   }
 }
-
 
 </style>

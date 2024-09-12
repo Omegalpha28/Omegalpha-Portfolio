@@ -1,5 +1,5 @@
 <template>
-  <section id="minishell" class="Minishell" data-aos="fade-up">
+  <section id="minishell" class="Minishell">
     <header class="Title_Minishell">
       <div class="Ms"><a href="https://github.com/Omegalpha28/Minishell">My Shell</a></div>
       <div @click="toggleVisibility" class="discover-button">Discover this Project</div>

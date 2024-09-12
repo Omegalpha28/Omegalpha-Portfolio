@@ -1,5 +1,5 @@
 <template>
-  <section id="duck_hunter" class="Duck" data-aos="fade-up">
+  <section id="duck_hunter" class="Duck">
     <header class="Title_Hunter">
       <div class="Hunter"><a href="https://github.com/Omegalpha28/Duck_Hunter">Duck Hunter</a></div>
       <div @click="toggleVisibility" class="discover-button">Discover this Project</div>

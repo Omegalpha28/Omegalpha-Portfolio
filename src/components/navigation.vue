@@ -13,7 +13,7 @@
         </div>
       </div>
     </nav>
-    <section class="Présentation" data-aos="zoom-in" data-aos-delay="50" data-aos-duration="1000">
+    <section class="Présentation" >
   <header>
     <div class="box" data-aos="zoom-in" data-aos-delay="70" data-aos-duration="1000">
       <h1 class="Title"> My Portfolio</h1>
@@ -28,7 +28,7 @@
     </div>
   </header>
 </section>
-
+  <div class="waves layer1" ></div>
     <about_me title="=About Me" data-aos-delay="50" data-aos-duration="1000"/>
     <duck_hunter title="Duck_hunter" data-aos-delay="50" data-aos-duration="1000"/>
     <akxolotl title="AKXolotl" data-aos-delay="50" data-aos-duration="1000"/>
@@ -53,6 +53,8 @@ import akIntroImage from '@/assets/AKXolotl/Intro.png';
 import akIntroDarkImage from '@/assets/AKXolotl/Intro2.png';
 import duckHunterImage from '@/assets/Duck_Hunter/Duck_hunt.jpg';
 import duckHunterDarkImage from '@/assets/Duck_Hunter/Duck_huntD.jpg';
+import wave from '@/assets/svg/waves.svg';
+import waveLight from '@/assets/svg/wavesL.svg';
 import seaImage from '@/assets/seaL.gif';
 import seaDarkImage from '@/assets/seaD.gif';
 import backgroundImage from '@/assets/backgroundL.gif';
@@ -98,6 +100,7 @@ onMounted(() => {
       themeGithubMode.src = githubLightModeImage;
       document.documentElement.style.setProperty('--background-button-color', 'var(--vt-c-back-red)');
       document.documentElement.style.setProperty('--background_text', 'var(--vt-c-back-light)');
+      document.documentElement.style.setProperty('--background-wave', `url(${waveLight})`);
       document.documentElement.style.setProperty('--AK-background', `url(${akIntroImage})`);
       document.documentElement.style.setProperty('--AK-Duck-Hunter', `url(${duckHunterImage})`);
       document.documentElement.style.setProperty('--about-background', `url(${seaImage})`);
@@ -118,6 +121,7 @@ onMounted(() => {
       themeBtnMode.src = darkModeImage;
       themeGithubMode.src = githubDarkModeImage;
       document.documentElement.style.setProperty('--background-button-color', 'var(--vt-c-back-red-dark)');
+      document.documentElement.style.setProperty('--background-wave', `url(${wave})`);
       document.documentElement.style.setProperty('--background_text', 'var(--vt-c-back-dark)');
       document.documentElement.style.setProperty('--AK-background', `url(${akIntroDarkImage})`);
       document.documentElement.style.setProperty('--about-background', `url(${seaDarkImage})`);
@@ -141,6 +145,19 @@ onMounted(() => {
 </script>
 
 <style>
+
+.waves {
+  aspect-ratio: 930/300;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.layer1 {
+  background-image: var(--background-wave);
+}
+
 .invisible-char {
   background: none;
   font-size: 0;

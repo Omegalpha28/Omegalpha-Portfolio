@@ -1,5 +1,5 @@
 <template>
-  <section id="akxolotl" class="AKXolotl" data-aos="fade-up">
+  <section id="akxolotl" class="AKXolotl">
     <header class="Title">
       <div class="AK"><a href="https://github.com/Omegalpha28/my_rpg">MY AK Xolotl</a></div>
       <div @click="toggleVisibility" class="discover-button">Discover this Project</div>

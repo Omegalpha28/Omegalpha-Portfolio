@@ -1,7 +1,7 @@
 <template>
   <section id="AboutMe" class="Experiences">
     <header class="about_title">
-      <a href="/src/assets/CV_MSOILI_Ossan.pdf" target="_blank" rel="noopener noreferrer">About Me</a>
+      <a href="@/assets/CV_MSOILI_Ossan.pdf" target="_blank" rel="noopener noreferrer">About Me</a>
     </header>
     <div class="lang_buttons">
       <button class="my-button" :class="{ active: isListVisible }" @click="toggleListVisibility">
